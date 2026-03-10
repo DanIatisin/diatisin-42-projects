@@ -1,1 +1,0 @@
-# diatisin-42-projects
