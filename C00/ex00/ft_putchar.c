@@ -6,22 +6,23 @@
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:28:30 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/12 15:37:51 by diatisin         ###   ########.fr       */
+/*   Updated: 2026/03/13 11:28:16 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-void ft_putchar(char c){
+
+void	ft_putchar(char c){
 	
 	write(1, &c, 1);
 
 }
 /*
-int main(){
+int	main(){
 
-	int c = 'a';
+	char	c = 'a';
 	ft_putchar(c);
-
+	
 	return 0;
 }
 */

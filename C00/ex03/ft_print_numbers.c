@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 16:26:14 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/13 11:26:58 by diatisin         ###   ########.fr       */
+/*   Created: 2026/03/13 10:45:26 by diatisin          #+#    #+#             */
+/*   Updated: 2026/03/13 11:25:07 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-
-	char	c = 'a';
-	while(c >= 'a' && c <= 'z')
+		
+	int	n = 48;
+		
+	while(n >= 48 && n <= 57)
 	{
-	
-		write(1, &c, 1);
-		c++;
+
+		write(1, &n, 1);
+		n++;
+
 	}
 
 }
-
-
 /*
-int	main()
+int 	main()
 {
-
-	ft_print_alphabet();
+	
+	ft_print_numbers();
 
 	return 0;
 }
