@@ -12,7 +12,7 @@ void	ft_putchar(char *str)
 
 int	main(void)
 {
-	char	*str = "Hello World!";
+	char	str[] = "Hello World!";
 
 	ft_putchar(str);
 	return(0);

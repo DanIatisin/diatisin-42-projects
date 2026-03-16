@@ -14,7 +14,7 @@ int	ft_strlen(char *str)
 
 /*int	main(void)
 {
-	char	*str = "Hello";
+	char	str[] = "Hello";
 	
 	int	length;
 	length = ft_strlen(str);
