@@ -6,16 +6,13 @@
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 13:19:31 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/18 16:24:04 by diatisin         ###   ########.fr       */
+/*   Updated: 2026/03/20 12:46:31 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	char	*start;
-	
+
 	start = dest;
 	while (*src != '\0' && n > 0)
 	{
@@ -24,16 +21,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		src++;
 		n--;
 	}
-	
-	while(n > 0)
+	while (n > 0)
 	{
 		*dest = '\0';
 		dest++;
 		n--;
 	}
-		printf("%s", start);
-
-		return (start);
+	return (start);
 }
 /*
 int	main(void)
