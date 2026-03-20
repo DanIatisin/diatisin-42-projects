@@ -21,7 +21,15 @@
 int	main(void)
 {	
 	int	num[] = {4, 2, 5, 3};
-	int	size;
+	int	size = 0;
+	int	i = 0;	
+	while (*num != NULL)
+	{
+		size++;
+		i++;
+	}
+
+	printf("%d\n", size);
 
 	return(0);
 }

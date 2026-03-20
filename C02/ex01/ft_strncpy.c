@@ -14,29 +14,33 @@
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0' && n > 0)
+	char	*start;
+	
+	start = dest;
+	while (*src != '\0' && n > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		*dest = *src;
+		dest++;
+		src++;
 		n--;
 	}
+	
+	while(n > 0)
+	{
+		*dest = '\0';
+		dest++;
+		n--;
+	}
+		printf("%s", start);
 
-		dest[i + 1] = '\0';
-
-		printf("%s", dest);
-
-		return (dest);
+		return (start);
 }
 /*
 int	main(void)
-{
-	char src[] = "abcde";
-	char dest[] = "defg";
+{	
+	char	buff[] = "World1"; 
 	
-	ft_strncpy(dest, src , 3);
+	ft_strncpy(buff, "Hello" , 3);
 
 	return 0;
 }*/
