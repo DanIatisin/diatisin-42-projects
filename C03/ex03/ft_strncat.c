@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/20 11:56:49 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/23 11:07:44 by diatisin         ###   ########.fr       */
+/*   Created: 2026/03/23 12:25:03 by diatisin          #+#    #+#             */
+/*   Updated: 2026/03/23 12:34:11 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	count;
-	unsigned int	i;
+	char	*start;
 
-	count = 0;
-	while (src[count] != '\0')
+	start = dest;
+	while (*dest != '\0')
 	{
-		count++;
+		dest++;
 	}
-	i = 0;
-	while (size > 0)
+	while (*src != '\0' && nb > 0)
 	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-		size--;
+		*dest = *src;
+		dest++;
+		src++;
+		nb--;
 	}
-	return (count);
+	*dest = '\0';
+	return (start);
 }

@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/20 11:56:49 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/23 11:07:44 by diatisin         ###   ########.fr       */
+/*   Created: 2026/03/23 11:30:58 by diatisin          #+#    #+#             */
+/*   Updated: 2026/03/23 11:32:19 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned int	count;
 	unsigned int	i;
 
-	count = 0;
-	while (src[count] != '\0')
-	{
-		count++;
-	}
 	i = 0;
-	while (size > 0)
+	while (i < n)
 	{
-		while (src[i] != '\0' && i < size - 1)
+		if (s1[i] != s2[i])
 		{
-			dest[i] = src[i];
-			i++;
+			return (s1[i] - s2[i]);
 		}
-		dest[i] = '\0';
-		size--;
+		else if (s1[i] != '\0')
+		{
+			return (0);
+		}
+		i++;
 	}
-	return (count);
+	return (0);
 }
