@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -13,25 +12,6 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char	*start;
-
-	start = dest;
-	while (*dest != '\0')
-	{
-		dest++;
-	}
-	while (*src != '\0' && nb > 0)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		nb--;
-	}
-	*dest = '\0';
-	return (start);
-=======
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
 	int	i;
 	int	j;
 
@@ -43,13 +23,10 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	}
 	while (src[j] != '\0' && nb > 0)
 	{
-		dest[i] = src[j];
-		i++;
+		dest[i + j] = src[j];
 		j++;
 		nb--;
 	}
-	dest[i] = '\0';
-	
+	dest[i + j] = '\0';
 	return (dest);
->>>>>>> 1825e8d5a6e6910f3742bd85e13d1aa317600057
 }

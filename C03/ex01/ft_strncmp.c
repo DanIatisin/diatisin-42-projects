@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-=======
->>>>>>> 1825e8d5a6e6910f3742bd85e13d1aa317600057
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
@@ -21,7 +18,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	while (i < n)
 	{
 		if (s1[i] != s2[i])
-<<<<<<< HEAD
 		{
 			return (s1[i] - s2[i]);
 		}
@@ -32,12 +28,4 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 	return (0);
-=======
-			return (s1[i] - s2[i]);
-		if (s1[i] == '\0')
-			return (0);
-		i++;
-	}
-	return 0;
->>>>>>> 1825e8d5a6e6910f3742bd85e13d1aa317600057
 }
