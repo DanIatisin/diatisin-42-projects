@@ -6,10 +6,10 @@
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 11:59:18 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/25 11:59:20 by diatisin         ###   ########.fr       */
+/*   Updated: 2026/03/30 16:18:35 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <stdio.h>
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -40,4 +40,12 @@ char	*ft_strstr(char *str, char *to_find)
 		i++;
 	}
 	return (NULL);
+}
+
+int	main(int argc, char **argv)
+{
+	if(argc == 3)
+		printf("%s\n", ft_strstr(argv[1], argv[2]));
+
+	return 0;
 }
