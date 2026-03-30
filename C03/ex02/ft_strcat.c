@@ -6,10 +6,9 @@
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 11:59:55 by diatisin          #+#    #+#             */
-/*   Updated: 2026/03/23 12:17:04 by diatisin         ###   ########.fr       */
+/*   Updated: 2026/03/25 15:35:59 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
@@ -23,9 +22,10 @@ char	*ft_strcat(char *dest, char *src)
 	}
 	while (src[j] != '\0')
 	{
-		dest[i + j] = src[j];
+		dest[i] = src[j];
+		i++;
 		j++;
 	}
-	dest[i + j] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
