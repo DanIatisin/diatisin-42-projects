@@ -6,10 +6,10 @@ int	ft_sqrt(int nb)
 		return (0);
 	if (nb == 0)
 		return (0);
-	if (nb > 2147395600)
-		return (0);
+	if (nb == 1)
+		return (1);
 	num = 2;
-	while ((num * num) < nb){
+	while ((num * num) <= nb){
 		if((num * num) == nb)
 			return (num);
 		num++;
