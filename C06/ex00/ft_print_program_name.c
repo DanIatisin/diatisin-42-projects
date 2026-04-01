@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/01 12:11:45 by diatisin          #+#    #+#             */
+/*   Updated: 2026/04/01 12:13:22 by diatisin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-int	main (int argc, char **argv)
+
+int	main(int argc, char **argv)
 {
 	int	i;
 
@@ -12,6 +25,5 @@ int	main (int argc, char **argv)
 		i++;
 	}
 	write(1, "\n", 1);
-
 	return (0);
 }

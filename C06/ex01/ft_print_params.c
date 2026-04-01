@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/01 12:14:09 by diatisin          #+#    #+#             */
+/*   Updated: 2026/04/01 12:14:33 by diatisin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
+
 int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
 
 	i = 1;
-	if(argc < 2)
+	if (argc < 2)
 		return (1);
 	while (argv[i])
 	{
@@ -18,5 +31,5 @@ int	main(int argc, char **argv)
 		write(1, "\n", 1);
 		i++;
 	}
-	return 0;
+	return (0);
 }
