@@ -1,0 +1,16 @@
+/*#include <unistd.h>*/
+int	ft_isalpha(int c)
+{
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
+}
+
+/*int main()
+{
+	ft_isalpha('A');
+	ft_isalpha('z');
+	ft_isalpha('0');
+	ft_isalpha('+');
+	return (0);
+}*/

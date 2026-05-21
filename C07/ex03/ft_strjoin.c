@@ -42,5 +42,3 @@ char	*search_world(char *sep, char *str)
 	return (resutl);
 	}
 }*/
-
-:
