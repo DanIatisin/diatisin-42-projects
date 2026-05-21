@@ -1,11 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/21 11:35:03 by diatisin          #+#    #+#             */
+/*   Updated: 2026/05/21 12:23:08 by diatisin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*#include <stdio.h>
 #include <stdlib.h>*/
+
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*str = s;
+	char	*ptr;
 	size_t	i;
 
 	i = 0;
+	*ptr = (char *)s;
 	while (i < n)
 	{
 		str[i] = (unsigned char)c;
@@ -14,7 +28,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*int	main()
+/*int	main(void)
 {
 	char str[10] = "zgs2323sd2";
 	char *string;
