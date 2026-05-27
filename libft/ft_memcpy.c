@@ -12,14 +12,15 @@
 
 /*#include <stdio.h>
 #include <stdlib.h>*/
+#include "libft.h"
 void	*memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	char	*s;
-	char	*d;
+	size_t				i;
+	unsigned const char	*s;
+	unsigned char		*d;
 
-	s = (char *)src;
-	d = (char *)dest;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{
