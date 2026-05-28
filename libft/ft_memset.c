@@ -5,13 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/21 11:35:03 by diatisin          #+#    #+#             */
-/*   Updated: 2026/05/21 12:23:08 by diatisin         ###   ########.fr       */
+/*   Created: 2026/05/28 14:32:52 by diatisin          #+#    #+#             */
+/*   Updated: 2026/05/28 14:33:35 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <stdlib.h>*/
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -28,13 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*int	main(void)
-{
-	char str[10] = "zgs2323sd2";
-	char *string;
-
-	string = (char *)ft_memset(str, 'b', 3);
-	printf("%s\n", string);
-	return (0);
-}*/

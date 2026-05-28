@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 /*#include <stdio.h>
-#include <stdlib.h>*/
 #include "libft.h"
+#include <stdlib.h>*/
+
 void	*memcpy(void *dest, const void *src, size_t n)
 {
 	size_t				i;
