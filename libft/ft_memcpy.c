@@ -3,16 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 14:12:38 by diatisin          #+#    #+#             */
-/*   Updated: 2026/05/21 14:13:09 by diatisin         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:39:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <stdlib.h>*/
-#include "libft.h"
 void	*memcpy(void *dest, const void *src, size_t n)
 {
 	size_t				i;
@@ -30,14 +27,3 @@ void	*memcpy(void *dest, const void *src, size_t n)
 	d[i] = 0;
 	return (dest);
 }
-
-/*int	main(void)
-{
-	char	src[6] = "abcdef";
-	char	*dest;
-
-	dest = malloc(sizeof(char) * 5);
-	dest = (char *)memcpy(dest, src, 3);
-	printf("%s\n", dest);
-	return (0);
-}*/

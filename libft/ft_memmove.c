@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 12:43:30 by diatisin          #+#    #+#             */
-/*   Updated: 2026/05/28 12:49:22 by diatisin         ###   ########.fr       */
+/*   Created: 2026/05/28 14:40:31 by marvin            #+#    #+#             */
+/*   Updated: 2026/05/28 14:40:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,13 +41,3 @@ void	*memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int	main(void)
-{
-	char	src[5] = "ciao";
-	char	*dest;
-
-	dest = memmove(dest, src, 5);
-	printf("%s\n", dest);
-	return (0);
-}*/
