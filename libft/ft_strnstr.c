@@ -10,7 +10,7 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 	if(*substr == '\0')
 		return ((char *)str);
 	i = 0;
-	while (substr[i] != '\0' && i > n)
+	while (substr[i] != '\0' && i > len)
 	{
 		j = 0;
 		if (str[i] == substr[j])

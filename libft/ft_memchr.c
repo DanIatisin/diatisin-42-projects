@@ -1,17 +1,16 @@
 #include "libft.h"
 
-void	*memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
-	int				i;
+	size_t	i;
 
-	str = s;
+	if(!s)
+		return (NULL);
 	i = 0;
-	while (n > 0)
+	while (i < n)
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)(s[i] + i));
-		n--;
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s+ i));
 		i++;
 	}
 	return (NULL);
