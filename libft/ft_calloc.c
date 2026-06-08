@@ -3,12 +3,16 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	sum;
-	void *ptr;
+	void	*ptr;
 
-	sum = nmemb * size;
-	ptr = (void *)malloc(sum);
-	if(!ptr)
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	if (nmemb > ((size_t)-1) / size)
 		return (NULL);
-	ft_bzero(ptr, (nmemb * size));
+	sum = nmemb * size;
+	ptr = malloc(sum);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memset(ptr, 0, sum);
 	return (ptr);
 }

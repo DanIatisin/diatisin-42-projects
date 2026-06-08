@@ -1,14 +1,14 @@
 #include "libft.h"
 
-static size_t get_word(char const *s, char c)
+static size_t	get_word(char const *s, char c)
 {
-	size_t count;
-	
+	size_t	count;
+
 	count = 0;
 	while (*s)
 	{
 		if (*s != c)
-		{	
+		{
 			count++;
 			while (*s && *s != c)
 				s++;
@@ -27,14 +27,14 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	result = malloc(sizeof(char *) * (get_word(s, c) + 1));
-	if(!result)
+	if (!result)
 		return (NULL);
 	while (*s)
 	{
-		if(*s != c)
+		if (*s != c)
 		{
 			len = 0;
-			while(*s && *s!= c)
+			while (*s && *s != c)
 			{
 				len++;
 				s++;
