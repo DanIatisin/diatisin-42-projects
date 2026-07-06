@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 11:51:17 by diatisin          #+#    #+#             */
-/*   Updated: 2026/06/08 11:51:22 by diatisin         ###   ########.fr       */
+/*   Created: 2026/06/08 11:51:29 by diatisin          #+#    #+#             */
+/*   Updated: 2026/06/08 11:51:30 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
+	if ((!str || !substr) && len == 0)
+		return (NULL);
+	if (*substr == '\0')
+		return ((char *)str);
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s1[i] == s2[i] && i < n)
+	while (str[i] != '\0' && i < len)
+	{
+		j = 0;
+		if (str[i] == substr[j])
+		{
+			while (substr[j] && substr[j] == str[i + j] && (i + j) < len)
+				j++;
+			if (substr[j] == '\0')
+				return ((char *)&str[i]);
+		}
 		i++;
-	if (i == n)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	return (NULL);
 }

@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <diatisin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/21 11:35:20 by diatisin          #+#    #+#             */
-/*   Updated: 2026/06/08 11:58:26 by diatisin         ###   ########.fr       */
+/*   Created: 2026/06/08 11:49:59 by diatisin          #+#    #+#             */
+/*   Updated: 2026/06/08 12:04:57 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>*/
-int	ft_isalnum(int c)
-{
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0'
-			&& c <= '9'))
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
-/*int main()
+char	*ft_strjoin(const char *s1, char const *s2)
 {
-	ft_isalnum('1');
-	ft_isalnum('A');
-	ft_isalnum('g');
-	ft_isalnum('+');
-	return (0);
-}*/
+	size_t	i;
+	size_t	j;
+	size_t	total_len;
+	char	*result;
+
+	total_len = ft_strlen(s1) + ft_strlen(s2);
+	result = (char *)malloc(sizeof(char) * (total_len + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i])
+		result[j++] = s1[i++];
+	i = 0;
+	while (s2[i])
+		result[j++] = s2[i++];
+	result[j] = '\0';
+	return (result);
+}

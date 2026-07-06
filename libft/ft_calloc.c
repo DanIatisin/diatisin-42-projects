@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 11:51:17 by diatisin          #+#    #+#             */
-/*   Updated: 2026/06/08 11:51:22 by diatisin         ###   ########.fr       */
+/*   Created: 2026/06/08 11:44:51 by diatisin          #+#    #+#             */
+/*   Updated: 2026/06/08 11:44:55 by diatisin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+	size_t	sum;
+	void	*ptr;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s1[i] == s2[i] && i < n)
-		i++;
-	if (i == n)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	if (nmemb > ((size_t)-1) / size)
+		return (NULL);
+	sum = nmemb * size;
+	ptr = malloc(sum);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memset(ptr, 0, sum);
+	return (ptr);
 }
