@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -10,6 +11,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+=======
+>>>>>>> ec08bee0a197fc3ec42809c8af8dd258025b6466
 #include "libft.h"
 
 static size_t	length(int n)
@@ -29,9 +32,15 @@ static size_t	length(int n)
 
 char	*ft_itoa(int n)
 {
+<<<<<<< HEAD
 	char		*result;
 	long int	num;
 	size_t		len;
+=======
+	size_t		len;
+	char		*result;
+	long int	num;
+>>>>>>> ec08bee0a197fc3ec42809c8af8dd258025b6466
 
 	len = length(n);
 	num = n;
@@ -42,12 +51,21 @@ char	*ft_itoa(int n)
 	if (num == 0)
 	{
 		result[0] = '0';
+<<<<<<< HEAD
+=======
+		return (result);
+>>>>>>> ec08bee0a197fc3ec42809c8af8dd258025b6466
 	}
 	if (num < 0)
 	{
 		result[0] = '-';
 		num = -num;
 	}
+<<<<<<< HEAD
+=======
+	else
+		num = n;
+>>>>>>> ec08bee0a197fc3ec42809c8af8dd258025b6466
 	while (num > 0)
 	{
 		result[--len] = (num % 10) + '0';
