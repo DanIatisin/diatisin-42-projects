@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 11:56:10 by diatisin          #+#    #+#             */
-/*   Updated: 2026/07/06 15:40:35 by diatisin         ###   ########.fr       */
+/*   Updated: 2026/07/11 19:41:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdarg.h>
 #include <unistd.h>
 
@@ -19,29 +20,54 @@ int	ft_printf(const char *format, ...)
 	int	char_count;
 
 	char_count = 0;
-	va_start (args, format);
+	va_start(args, format);
 	while (*format)
 	{
-		if (*format && *(format + 1))
+		if (*format == '%'&& *(format + 1))
 		{
 			format++;
-			char_count += input_format(format, args);
+			char_count += take_format(format, args);
 		}
 		else
 		{
 			ft_putchar(*format);
 			char_count++;
 		}
-	
+	format++;
 	}
+	va_end(args);
 	return (char_count);
 }
 
-int	input_format(const char *format, va_list args)
+int	take_format(const char *format, va_list args)
 {
 	int	char_count;
 
 	char_count = 0;
-
+	if (*format == 'd' || *format == 'i')
+		char_count += print_num(va_arg(args, int));
+	else if (*format == 'c')
+	{
+		ft_putchar(va_arg(args, int));
+		char_count ++;
+	}
+	else if (*format == 's')
+		char_count += print_string(va_arg(args, const char *));
+	else if (*format == 'p')
+		char_count += print_pointer(va_arg(args, void *));
+	else if (*format == 'x')
+		char_count += print_hex(va_arg(args, unsigned int), 0);
+	else if (*format == 'X')
+		char_count += print_hex(va_arg(args, unsigned int), 1);
+	else if (*format == 'u')
+		char_count += print_unsigned(va_arg(args, unsigned int));
+	else 
+		char_count += ft_putchar('%');
 	return (char_count);
+}
+
+int ft_putchar(char c)
+{
+    write (1, &c, 1);
+    return (1);
 }
