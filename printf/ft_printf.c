@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 11:56:10 by diatisin          #+#    #+#             */
-/*   Updated: 2026/07/11 19:41:09 by marvin           ###   ########.fr       */
+/*   Updated: 2026/07/11 19:43:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	int	char_count;
+	va_list	args;
+	int		char_count;
 
 	char_count = 0;
 	va_start(args, format);
 	while (*format)
 	{
-		if (*format == '%'&& *(format + 1))
+		if (*format == '%' && *(format + 1))
 		{
 			format++;
 			char_count += take_format(format, args);
@@ -33,7 +33,7 @@ int	ft_printf(const char *format, ...)
 			ft_putchar(*format);
 			char_count++;
 		}
-	format++;
+		format++;
 	}
 	va_end(args);
 	return (char_count);
@@ -49,7 +49,7 @@ int	take_format(const char *format, va_list args)
 	else if (*format == 'c')
 	{
 		ft_putchar(va_arg(args, int));
-		char_count ++;
+		char_count++;
 	}
 	else if (*format == 's')
 		char_count += print_string(va_arg(args, const char *));
@@ -61,13 +61,13 @@ int	take_format(const char *format, va_list args)
 		char_count += print_hex(va_arg(args, unsigned int), 1);
 	else if (*format == 'u')
 		char_count += print_unsigned(va_arg(args, unsigned int));
-	else 
+	else
 		char_count += ft_putchar('%');
 	return (char_count);
 }
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    write (1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }
