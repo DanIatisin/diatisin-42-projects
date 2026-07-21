@@ -1,12 +1,12 @@
 *This project has been created as part of the 42 curriculum by diatisin.*
 
-#ft_printf
+# ft_printf
 
-##Description
+## Description
 
 ft_printf recreates a simplified version of the standard C printf() function. It handles the conversions %c %s %p %d %i %u %x %X %%.
 
-##Instructions
+## Instructions
 ````bash
 make        # builds libftprintf.a
 make clean  # removes .o files
