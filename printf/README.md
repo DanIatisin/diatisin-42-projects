@@ -1,6 +1,7 @@
 *This project has been created as part of the 42 curriculum by diatisin.*
 
 #ft_printf
+
 ##Description
 
 ft_printf recreates a simplified version of the standard C printf() function. It handles the conversions %c %s %p %d %i %u %x %X %%.
