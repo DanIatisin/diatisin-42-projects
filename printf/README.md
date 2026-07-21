@@ -24,7 +24,12 @@ int main(void)
     return (0);
 }
 ````
-Compile with: cc main.c -L. -lftprintf -I. -o test
+Compile with
+
+```bash
+cc main.c -L. -lftprintf -I. -o test
+````
+
 the compilation generates:
 ````bash
 libftprintf.a
