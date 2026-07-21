@@ -31,10 +31,11 @@ libftprintf.a
 ````
 
 Algorithm and data structures:
-So basicaly i read the string until i encounter a "%" then i lock the idex on that element and just by adding "+1" to the index in the condition i read the next element which if it is a format i enter the if else statements, where i recall the funtions created in : "functions.c" 
+So basicaly the program read the string until it encounters a "%" then i lock the idex on that element and just by adding "+1" to the index in the condition it reads the next element which if it is a format it enters the if else statements, where the funtions are recaled from functions.c 
 
-Resources:
+###  Resources
 printf(3) man page
 C variadic functions — cppreference
 
-AI usage: in this project AI was used only to explain more in detail the subject
+# AI usage 
+In this project AI was used only to explain more in detail the subject
