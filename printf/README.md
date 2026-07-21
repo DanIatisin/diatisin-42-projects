@@ -25,22 +25,17 @@ int main(void)
 }
 ````
 Compile with
-
 ```bash
 cc main.c -L. -lftprintf -I. -o test
 ````
-
 the compilation generates:
 ````bash
 libftprintf.a
 ````
-
-Algorithm and data structures:
-So basicaly the program read the string until it encounters a "%" then i lock the idex on that element and just by adding "+1" to the index in the condition it reads the next element which if it is a format it enters the if else statements, where the funtions are recaled from functions.c 
-
-###  Resources
+## Algorithm and data structures:
+The format string is scanned character by character using a single index. Regular characters are printed directly. When a % is found, the index moves to the next character to identify the conversion specifier. A series of if/else conditions then dispatches the call to the matching function in functions.c, which retrieves the corresponding variadic argument via va_arg and handles its formatting and output. 
+##  Resources
 printf(3) man page
 C variadic functions — cppreference
-
-# AI usage 
+## AI usage 
 In this project AI was used only to explain more in detail the subject
