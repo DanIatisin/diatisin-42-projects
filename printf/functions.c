@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   functions.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: diatisin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/15 11:36:46 by diatisin          #+#    #+#             */
+/*   Updated: 2026/07/15 11:38:50 by diatisin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	print_string(const char *s)
@@ -73,12 +85,11 @@ int	print_hex(unsigned long val, int uppercase)
 
 int	print_pointer(void *ptr)
 {
-	int char_count;
-	unsigned long address;
+	int				char_count;
+	unsigned long	address;
 
 	char_count = 0;
 	address = (unsigned long)ptr;
-
 	if (ptr == NULL)
 	{
 		write(1, "(nil)", 5);
