@@ -13,6 +13,10 @@ make clean  # removes .o files
 make fclean # removes .o files and the library
 make re     # rebuilds everything
 ````
+the compilation generates:
+````bash
+libftprintf.a
+````
 Usage example:
 
 ````c
@@ -24,15 +28,11 @@ int main(void)
     return (0);
 }
 ````
-Compile with
+Run test with
 ```bash
 cc -Wall -Wextra -Werror tests/main.c -L. -lftprintf -I. -o test
 
 ./test
-````
-the compilation generates:
-````bash
-libftprintf.a
 ````
 ## Algorithm and data structures:
 The format string is scanned character by character using a single index. Regular characters are printed directly. When a % is found, the index moves to the next character to identify the conversion specifier. A series of if/else conditions then dispatches the call to the matching function in functions.c, which retrieves the corresponding variadic argument via va_arg and handles its formatting and output. 
