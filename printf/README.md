@@ -26,7 +26,9 @@ int main(void)
 ````
 Compile with
 ```bash
-cc main.c -L. -lftprintf -I. -o test
+cc -Wall -Wextra -Werror tests/main.c -L. -lftprintf -I. -o test
+
+./test
 ````
 the compilation generates:
 ````bash
