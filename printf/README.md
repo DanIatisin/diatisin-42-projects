@@ -30,8 +30,10 @@ int main(void)
 ````
 Run test with
 ```bash
-cc -Wall -Wextra -Werror tests/main.c -L. -lftprintf -I. -o test
-
+cc -Wall -Wextra -Werror <name of the test file with .c extension> -L. -lftprintf -I. -o test
+````
+then you run: 
+````bash
 ./test
 ````
 ## Algorithm and data structures:
